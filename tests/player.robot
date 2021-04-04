@@ -13,6 +13,7 @@ Reproduzir paródia bug de manhã
     Check If Search Page is Opened
     Click On Sertanejo
     Check If Sertanejo is Opened
-    Click On Marcus e Debug
-    Click On The Music
-    Check If Music is Playing
+    Open Album                      ${ALBUM}
+    Check If Album is Opened
+    Click On The Music              ${SONG}
+    Check If Music is Playing       ${SONG}

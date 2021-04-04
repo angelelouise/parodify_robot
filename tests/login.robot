@@ -13,25 +13,25 @@ Login com sucesso
     [tags]          smoke
     Open Login Page 
     #input[name*=email]
-    Login with                  papito@parodify.com     pwd123
+    Login with                  ${LOGIN_PADRAO}     ${LOGIN_PADRAO_PWD}
     Logout Link Should Be Visible
 
 Senha incorreta
     Open Login Page
-    Login with                  papito@parodify.com     abc123
-    Alert Should Be             Opps! Dados de acesso incorretos!
+    Login with                  ${LOGIN_PADRAO}     abc123
+    Alert Should Be             ${MENSSAGEM_ERRO}
 
 Email incorreto
     Open Login Page
-    Login with                  teste@parodify.com     pwd123
-    Alert Should Be             Opps! Dados de acesso incorretos!
+    Login with                  teste@parodify.com     ${LOGIN_PADRAO_PWD}
+    Alert Should Be             ${MENSSAGEM_ERRO}
 
 Email não informado
     Open Login Page
-    Login with                  ${EMPTY}    pwd123
-    Alert Should Be             Opps! Dados de acesso incorretos!
+    Login with                  ${EMPTY}    ${LOGIN_PADRAO_PWD}
+    Alert Should Be             ${MENSSAGEM_ERRO}
 
 Senha não informada
     Open Login Page
-    Login with                  papito@parodify.com     ${EMPTY}
-    Alert Should Be             Opps! Dados de acesso incorretos!
+    Login with                  ${LOGIN_PADRAO}     ${EMPTY}
+    Alert Should Be             ${MENSSAGEM_ERRO}
